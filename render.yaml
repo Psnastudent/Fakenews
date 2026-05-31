@@ -1,0 +1,30 @@
+services:
+  # 1. FastAPI Backend Service
+  - type: web
+    name: factguard-api
+    env: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.0
+      # The empty SUPABASE_KEY means it will fall back to safe defaults,
+      # but you can add your actual Supabase key in the Render Dashboard later!
+
+  # 2. React Frontend Service
+  - type: web
+    name: factguard-frontend
+    env: static
+    rootDir: webapp
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      # Inject the API URL automatically at build time so React can talk to FastAPI
+      - key: VITE_API_URL
+        fromService:
+          type: web
+          name: factguard-api
+          envVarKey: RENDER_EXTERNAL_URL
+        # Append the /api/v1 path to the external URL
+        property: connectionString
