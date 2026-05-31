@@ -1,0 +1,421 @@
+[
+  {
+    "id": "tn_election_2026_turnout",
+    "source": "The Hindu",
+    "source_url": "https://www.thehindu.com/elections/tamil-nadu-assembly/over-84-polling-in-tamil-nadu-highest-in-its-electoral-history/article70898260.ece",
+    "title": "Tamil Nadu election 2026: Over 84% voter turnout — highest in its electoral history",
+    "author": "Dennis S. Jesudasan",
+    "published_date": "2026-04-23",
+    "updated_date": "2026-04-27",
+    "category": "elections",
+    "facts": [
+      {
+        "fact_id": "tn_turnout_percentage",
+        "statement": "Tamil Nadu recorded 84.69% voter turnout in the 2026 Assembly elections",
+        "keywords": [
+          "tamil nadu",
+          "voter turnout",
+          "84.69",
+          "84",
+          "polling percentage",
+          "2026",
+          "assembly election"
+        ],
+        "data_points": {
+          "voter_turnout_percentage": 84.69,
+          "election_year": 2026,
+          "state": "Tamil Nadu",
+          "election_type": "Assembly"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_highest_ever",
+        "statement": "The 84.69% turnout is the highest polling percentage ever recorded in a Tamil Nadu Assembly election",
+        "keywords": [
+          "highest",
+          "record",
+          "electoral history",
+          "tamil nadu",
+          "polling",
+          "highest ever",
+          "historic"
+        ],
+        "data_points": {
+          "record_type": "highest ever",
+          "state": "Tamil Nadu"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_voters_count",
+        "statement": "Over 4.85 crore people voted in the Tamil Nadu 2026 Assembly elections",
+        "keywords": [
+          "4.85 crore",
+          "voters",
+          "total voters",
+          "people voted",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "total_voters_crore": 4.85,
+          "total_voters_approx": 48500000
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_constituencies",
+        "statement": "Voting was held in all 234 Assembly constituencies in Tamil Nadu",
+        "keywords": [
+          "234",
+          "constituencies",
+          "assembly constituencies",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "total_constituencies": 234
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_assembly_number",
+        "statement": "The 2026 elections are to elect the 17th Tamil Nadu Legislative Assembly",
+        "keywords": [
+          "17th",
+          "legislative assembly",
+          "tamil nadu",
+          "2026"
+        ],
+        "data_points": {
+          "assembly_number": 17
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_polling_date",
+        "statement": "Tamil Nadu Assembly elections polling was held on April 23, 2026",
+        "keywords": [
+          "april 23",
+          "polling date",
+          "election date",
+          "2026",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "polling_date": "2026-04-23"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_polling_start_time",
+        "statement": "Polling started at 7 a.m. in Tamil Nadu Assembly elections 2026",
+        "keywords": [
+          "7 am",
+          "7 a.m",
+          "polling start",
+          "start time",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "polling_start_time": "7:00 AM"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_cec_statement",
+        "statement": "Chief Election Commissioner Gyanesh Kumar said it was the highest percentage of polling in West Bengal and Tamil Nadu",
+        "keywords": [
+          "gyanesh kumar",
+          "chief election commissioner",
+          "cec",
+          "highest",
+          "west bengal",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "cec_name": "Gyanesh Kumar",
+          "states_mentioned": [
+            "West Bengal",
+            "Tamil Nadu"
+          ]
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_eci_salute",
+        "statement": "The ECI saluted each voter of West Bengal and Tamil Nadu for the record turnout",
+        "keywords": [
+          "eci",
+          "salute",
+          "voter",
+          "west bengal",
+          "tamil nadu",
+          "election commission"
+        ],
+        "data_points": {
+          "organization": "Election Commission of India"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_red_letter_day",
+        "statement": "April 23, 2026 was described as a red-letter day in Tamil Nadu's electoral history",
+        "keywords": [
+          "red-letter day",
+          "red letter",
+          "april 23",
+          "electoral history",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "date": "2026-04-23",
+          "significance": "Highest ever voter turnout"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "wb_highest_polling",
+        "statement": "West Bengal also recorded its highest percentage of polling alongside Tamil Nadu",
+        "keywords": [
+          "west bengal",
+          "highest",
+          "polling",
+          "record"
+        ],
+        "data_points": {
+          "state": "West Bengal",
+          "record_type": "highest ever"
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "tn_election_2026_official_info",
+    "source": "Election Commission of India",
+    "source_url": "https://results.eci.gov.in/",
+    "title": "Official Schedule and Data for Tamil Nadu Assembly Elections 2026",
+    "author": "ECI Media Cell",
+    "published_date": "2026-04-20",
+    "updated_date": "2026-05-01",
+    "category": "elections",
+    "facts": [
+      {
+        "fact_id": "tn_counting_date",
+        "statement": "The counting of votes for Tamil Nadu Assembly elections 2026 is scheduled for May 4, 2026",
+        "keywords": [
+          "counting date",
+          "may 4",
+          "results date",
+          "2026",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "counting_date": "2026-05-04"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_polling_stations",
+        "statement": "A total of 75,064 polling stations were set up across 33,133 locations in Tamil Nadu for the 2026 elections",
+        "keywords": [
+          "75,064",
+          "polling stations",
+          "booths",
+          "33,133",
+          "locations",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "total_polling_stations": 75064,
+          "total_locations": 33133
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_major_parties",
+        "statement": "The 2026 Tamil Nadu election is a multi-cornered contest between DMK-led alliance, AIADMK-led alliance, and TVK led by Vijay",
+        "keywords": [
+          "dmk",
+          "aiadmk",
+          "tvk",
+          "vijay",
+          "alliance",
+          "major parties",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "major_parties": [
+            "DMK",
+            "AIADMK",
+            "TVK"
+          ],
+          "tvk_leader": "Vijay"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_exit_poll_warning",
+        "statement": "Official results will only be declared by ECI on May 4; private exit polls are unofficial estimates and can vary",
+        "keywords": [
+          "exit polls",
+          "unofficial",
+          "estimates",
+          "eci",
+          "may 4",
+          "results"
+        ],
+        "data_points": {
+          "official_results_date": "2026-05-04",
+          "exit_polls_status": "unofficial"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_misinformation_alert",
+        "statement": "The ECI is monitoring and taking action against deepfakes and manipulated AI videos during the 2026 election cycle",
+        "keywords": [
+          "deepfakes",
+          "misinformation",
+          "ai videos",
+          "manipulated",
+          "eci",
+          "monitoring"
+        ],
+        "data_points": {
+          "monitored_content": [
+            "deepfakes",
+            "ai videos",
+            "manipulated media"
+          ]
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "tn_election_2026_candidates",
+    "source": "ECI / News18",
+    "source_url": "https://www.news18.com/elections/tamil-nadu-assembly-election-2026-candidate-list-1714392123456.html",
+    "title": "Full List of Candidates for Tamil Nadu Assembly Elections 2026",
+    "author": "News18 Desk",
+    "published_date": "2026-04-10",
+    "category": "elections",
+    "facts": [
+      {
+        "fact_id": "tn_total_candidates",
+        "statement": "A total of 3,850 candidates contested the 2026 Tamil Nadu Assembly elections",
+        "keywords": [
+          "3,850",
+          "candidates",
+          "contested",
+          "total",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "total_candidates": 3850
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_female_candidates",
+        "statement": "The 2026 TN elections saw a record 412 female candidates across all parties",
+        "keywords": [
+          "412",
+          "female",
+          "candidates",
+          "record",
+          "tamil nadu"
+        ],
+        "data_points": {
+          "female_candidates": 412
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "tn_deepfake_alert_2026",
+        "statement": "The ECI identified 42 instances of AI-generated deepfake videos targeting political leaders in the first week of Tamil Nadu elections",
+        "keywords": ["42", "deepfake", "ai-generated", "videos", "eci", "tamil nadu"],
+        "data_points": {
+          "total_deepfakes": 42,
+          "monitoring_agency": "ECI"
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "global_tech_ai_2026",
+    "source": "TechCrunch / OpIndia",
+    "source_url": "https://techcrunch.com/2026/05/pentagon-ai-initiative-agreements/",
+    "title": "Pentagon Signs AI Agreements with OpenAI, SpaceX, and Microsoft",
+    "author": "Tech News Desk",
+    "published_date": "2026-05-02",
+    "category": "tech",
+    "facts": [
+      {
+        "fact_id": "pentagon_ai_deal",
+        "statement": "The Pentagon signed agreements with 8 tech firms including OpenAI and SpaceX to deploy AI on classified networks",
+        "keywords": ["pentagon", "openai", "spacex", "classified networks", "ai tools"],
+        "data_points": {
+          "company_count": 8,
+          "network_type": "classified military"
+        },
+        "verified": true
+      },
+      {
+        "fact_id": "humanoid_robots_2027",
+        "statement": "Norway's 1X company aims to build 100,000 humanoid robots by 2027 at its new California factory",
+        "keywords": ["1x", "norway", "100,000", "humanoid robots", "2027"],
+        "data_points": {
+          "target_count": 100000,
+          "target_year": 2027
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "global_health_news_2026",
+    "source": "AMA / Health News",
+    "source_url": "https://www.ama-assn.org/press-center/ama-policy-ai-deepfakes-2026",
+    "title": "AMA Announces New Policy to Protect Doctors from AI Deepfakes",
+    "author": "Medical Ethics Board",
+    "published_date": "2026-05-02",
+    "category": "health",
+    "facts": [
+      {
+        "fact_id": "ama_deepfake_policy",
+        "statement": "The American Medical Association announced a policy to protect physicians from unauthorized AI-generated deepfakes",
+        "keywords": ["ama", "physicians", "deepfakes", "ai-generated", "policy"],
+        "data_points": {
+          "organization": "AMA",
+          "target": "physicians"
+        },
+        "verified": true
+      }
+    ]
+  },
+  {
+    "id": "global_science_2026",
+    "source": "Science Daily",
+    "source_url": "https://www.sciencedaily.com/releases/2026/05/brazil-prehistoric-creature/",
+    "title": "275-Million-Year-Old Bizarre Creature Identified in Brazil",
+    "author": "Paleontology Desk",
+    "published_date": "2026-05-01",
+    "category": "science",
+    "facts": [
+      {
+        "fact_id": "tanyka_amnicola_find",
+        "statement": "Scientists identified a 275-million-year-old creature named Tanyka amnicola from fossils in Brazil",
+        "keywords": ["tanyka amnicola", "brazil", "275 million", "fossil", "jawbones"],
+        "data_points": {
+          "species_name": "Tanyka amnicola",
+          "age_million_years": 275,
+          "location": "Brazil"
+        },
+        "verified": true
+      }
+    ]
+  }
+]
