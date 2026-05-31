@@ -9,6 +9,7 @@ from ..models.schemas import FactCheckRequest, FactCheckResponse, ContentType
 from ..services.verdict_engine import analyze_text, analyze_url, analyze_media
 from ..services.url_scraper import scrape_url
 from ..services.news_dataset import get_dataset
+from ..services.history_logger import log_check, get_history
 
 router = APIRouter(prefix="/api/v1/check", tags=["fact-check"])
 
@@ -22,6 +23,7 @@ async def check_text(request: FactCheckRequest):
         raise HTTPException(status_code=400, detail="Content too long. Maximum 10,000 characters.")
     try:
         result = await analyze_text(request.content)
+        log_check("TEXT", request.content, result.verdict)
         return result
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Analysis error: {str(e)}")
@@ -59,6 +61,7 @@ async def check_url(request: FactCheckRequest):
             )
 
         result = await analyze_url(url=url, scraped_text=scraped_text, scraped_title=scraped_title)
+        log_check("URL", url, result.verdict)
         return result
     except HTTPException:
         raise
@@ -77,7 +80,7 @@ async def check_image(file: UploadFile = File(...)):
         result_dict = await verify_image(image_bytes)
         
         from ..models.schemas import FactCheckResponse, Verdict, ContentType
-        return FactCheckResponse(
+        response = FactCheckResponse(
             verdict=Verdict.FAKE if result_dict["verdict"] == "fake" else Verdict.REAL,
             truth_score=result_dict["truth_score"],
             explanation=result_dict["explanation"],
@@ -87,6 +90,8 @@ async def check_image(file: UploadFile = File(...)):
             content_analyzed=file.filename,
             content_type=ContentType.IMAGE,
         )
+        log_check("IMAGE", file.filename, response.verdict)
+        return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Image analysis error: {str(e)}")
 
@@ -111,7 +116,7 @@ async def check_video(file: UploadFile = File(...)):
         
         from ..models.schemas import Verdict, ContentType, FactCheckResponse
         
-        return FactCheckResponse(
+        response = FactCheckResponse(
             verdict=Verdict.FAKE if is_fake else Verdict.REAL,
             truth_score=100 - confidence if is_fake else confidence,
             explanation="Video analysis completed. " + ("Deepfake characteristics found." if is_fake else "No temporal anomalies found."),
@@ -121,6 +126,8 @@ async def check_video(file: UploadFile = File(...)):
             content_analyzed=file.filename,
             content_type=ContentType.VIDEO,
         )
+        log_check("VIDEO", file.filename, response.verdict)
+        return response
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Video analysis error: {str(e)}")
 
@@ -130,6 +137,12 @@ async def check_video(file: UploadFile = File(...)):
 async def health_check():
     """Health check endpoint."""
     return {"status": "healthy", "service": "AI Fact Checker"}
+
+
+@router.get("/history")
+async def fetch_history(limit: int = 50):
+    """Fetch recent analysis history."""
+    return get_history(limit)
 
 
 @router.get("/stats")

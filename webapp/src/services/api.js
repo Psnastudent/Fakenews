@@ -41,3 +41,9 @@ export async function getStats() {
   if (!res.ok) throw new Error('Failed to get stats');
   return res.json();
 }
+
+export async function getHistory(limit = 50) {
+  const res = await fetch(`${API_BASE}/check/history?limit=${limit}`);
+  if (!res.ok) throw new Error('Failed to fetch history');
+  return res.json();
+}

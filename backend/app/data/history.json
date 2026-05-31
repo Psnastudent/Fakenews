@@ -1,0 +1,16 @@
+[
+  {
+    "id": "3b90876b-bffe-41bf-a588-0978cd8b840d",
+    "type": "IMAGE",
+    "content": "0001 (2).jpg",
+    "date": "2026-05-31 10:53",
+    "verdict": "REAL"
+  },
+  {
+    "id": "7958533a-6cec-48d8-a31f-665902be69aa",
+    "type": "TEXT",
+    "content": "NASA discovered a new galaxy today.",
+    "date": "2026-05-31 10:50",
+    "verdict": "FAKE"
+  }
+]

@@ -1,13 +1,22 @@
-import React from 'react';
-
-// Mock history data for demonstration
-const mockHistory = [
-  { id: 1, type: 'URL', content: 'https://bbc.com/news/live/1234', date: '2026-05-31 09:12', verdict: 'REAL' },
-  { id: 2, type: 'TEXT', content: 'NASA confirmed Earth will be dark...', date: '2026-05-31 08:45', verdict: 'FAKE' },
-  { id: 3, type: 'IMAGE', content: '1000 (10).jpg', date: '2026-05-31 08:20', verdict: 'FAKE' },
-];
+import React, { useEffect, useState } from 'react';
+import { getHistory } from '../services/api';
 
 export default function HistoryPage() {
+  const [history, setHistory] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getHistory()
+      .then(data => {
+        setHistory(data);
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <div className="section-light" style={{ minHeight: '100vh', paddingTop: '160px' }}>
       <div className="container">
@@ -32,23 +41,37 @@ export default function HistoryPage() {
                 </tr>
               </thead>
               <tbody>
-                {mockHistory.map((item) => (
-                  <tr key={item.id} style={{ borderBottom: '1px solid var(--border-light)' }}>
-                    <td style={{ padding: '16px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{item.date}</td>
-                    <td style={{ padding: '16px' }}>
-                      <span className="eyebrow" style={{ margin: 0, fontSize: '0.7rem' }}>{item.type}</span>
-                    </td>
-                    <td style={{ padding: '16px', color: 'var(--text-primary)', maxWidth: '300px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      {item.content}
-                    </td>
-                    <td style={{ padding: '16px' }}>
-                      <div className={`status-badge ${item.verdict === 'FAKE' ? 'status-fake' : 'status-real'}`}>
-                        <div className="status-dot" />
-                        {item.verdict}
-                      </div>
+                {loading ? (
+                  <tr>
+                    <td colSpan="4" style={{ padding: '32px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                      <div className="spinner" style={{ borderTopColor: 'var(--shinkei-amber)', width: '24px', height: '24px', borderWidth: '3px' }} />
                     </td>
                   </tr>
-                ))}
+                ) : history.length === 0 ? (
+                  <tr>
+                    <td colSpan="4" style={{ padding: '32px', textAlign: 'center', color: 'var(--text-muted)' }}>
+                      No analysis logs found. Run a scan to generate history.
+                    </td>
+                  </tr>
+                ) : (
+                  history.map((item) => (
+                    <tr key={item.id} style={{ borderBottom: '1px solid var(--border-light)' }}>
+                      <td style={{ padding: '16px', color: 'var(--text-secondary)', fontSize: '0.9rem' }}>{item.date}</td>
+                      <td style={{ padding: '16px' }}>
+                        <span className="eyebrow" style={{ margin: 0, fontSize: '0.7rem' }}>{item.type}</span>
+                      </td>
+                      <td style={{ padding: '16px', color: 'var(--text-primary)', maxWidth: '300px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                        {item.content}
+                      </td>
+                      <td style={{ padding: '16px' }}>
+                        <div className={`status-badge ${item.verdict === 'FAKE' ? 'status-fake' : 'status-real'}`}>
+                          <div className="status-dot" />
+                          {item.verdict}
+                        </div>
+                      </td>
+                    </tr>
+                  ))
+                )}
               </tbody>
             </table>
           </div>
